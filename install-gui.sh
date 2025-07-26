@@ -26,7 +26,7 @@ sudo pacman -S --needed plasma-meta
 
 # Install additional applications
 echo "Installing additional applications..."
-sudo pacman -S --needed konsole dolphin ark kate plasma-nm chromium flatpak micro
+sudo pacman -S --needed networkmanager konsole dolphin ark kate plasma-nm chromium flatpak micro
 
 # Install SDDM display manager
 echo "Installing SDDM..."

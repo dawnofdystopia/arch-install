@@ -1,0 +1,38 @@
+# Display the status of all network interfaces
+ip link show
+
+# List all loaded kernel modules and filter for those related to Intel Wireless (iwl)
+lsmod | grep iwl
+
+# List all devices that are blocked from being used (e.g., wireless devices)
+rfkill list
+
+# Unblock all Wi-Fi devices that are soft-blocked
+rfkill unblock wifi
+
+# Check the status of the iwd (Intel Wireless Daemon) service
+systemctl status iwd
+
+# Start the iwd service to manage wireless connections
+systemctl start iwd
+
+# Launch the interactive wireless control tool (iwctl) for managing wireless connections
+iwctl
+
+# Once inside iwctl, list all available wireless stations (interfaces)
+station list
+
+# Perform a scan for available networks using the wlan0 interface
+station wlan0 scan
+
+# List all available networks detected by the wlan0 interface
+station wlan0 get-networks
+
+# Connect to a specific Wi-Fi network using the wlan0 interface
+station wlan0 connect "Your Wifi SSID"
+
+# Exit the iwctl interactive tool
+exit
+
+# Ping google.com to check internet connectivity
+ping www.google.com

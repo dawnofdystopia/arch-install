@@ -15,4 +15,4 @@ sudo pacman -Syyu ttf-liberation
 sudo pacman -Syyu
 
 #This installs steam
-sudo pacman -S steam
+sudo pacman -S steam steam-native-runtime

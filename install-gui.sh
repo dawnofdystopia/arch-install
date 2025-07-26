@@ -12,9 +12,9 @@ sudo pacman -S --needed --noconfirm xorg-server xorg-apps xorg-xinit xorg-xrandr
 echo "Installing libinput driver..."
 sudo pacman -S --needed --noconfirm xf86-input-libinput
 
-# Install NVIDIA drivers and utilities
-echo "Installing NVIDIA drivers and utilities..."
-sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
+# Uncomment to install NVIDIA drivers and utilities
+#echo "Installing NVIDIA drivers and utilities..."
+#sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
 
 # Install Mesa for open-source graphics drivers
 echo "Installing Mesa..."
@@ -26,7 +26,7 @@ sudo pacman -S --needed --noconfirm plasma-meta
 
 # Install additional applications
 echo "Installing additional applications..."
-sudo pacman -S --needed --noconfirm networkmanager konsole dolphin ark kate plasma-nm chromium flatpak micro
+sudo pacman -S --needed --noconfirm networkmanager network-manager-applet konsole dolphin ark kate plasma-nm chromium flatpak micro
 
 # Install SDDM display manager
 echo "Installing SDDM..."

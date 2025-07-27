@@ -1,0 +1,39 @@
+cfdisk
+
+# make 3 partitions
+# sda1 1G
+# sda2 the same size as RAM
+# sda3 the rest
+# press write and type yes
+# press quit
+
+# See all partitions
+lsblk
+
+# Format main partition
+mkfs.ext4 /dev/sda3
+
+# Format boot partition
+mkfs.fat -F 32 /dev/sda1
+# Remember to make partition bootable
+
+# Make swap partition
+mkswap /dev/sda2
+
+# Mount main partition
+mount /dev/sda3 /mnt
+
+#  Create boot partition mounting point
+mkdir -p /mnt/boot/efi
+# For archinstall
+mkdir -p /mnt/boot/
+
+# Mount boot
+mount /dev/sda1 /mnt/boot/efi
+# For archinstall
+mount /dev/sda1 /mnt/boot
+
+# Turn on swap partition
+swapon /dev/sda2
+
+# In archinstall the start point in the partition selection section is /mnt

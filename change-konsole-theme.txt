@@ -1,0 +1,2 @@
+# edit /.local/share/konsole/Breeze.colorscheme
+# go to [General] and edit Blur=true and Opacity=0.4

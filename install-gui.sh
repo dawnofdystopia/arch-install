@@ -44,7 +44,7 @@ fi
 
 # Install additional applications
 echo "Installing additional applications..."
-if ! sudo pacman -S --needed --noconfirm networkmanager network-manager-applet konsole dolphin ark kate plasma-nm chromium flatpak micro; then
+if ! sudo pacman -S --needed --noconfirm networkmanager network-manager-applet konsole dolphin ark kate plasma-nm chromium flatpak timeshift micro; then
     handle_error "Failed to install additional applications."
 fi
 

@@ -7,6 +7,7 @@ lsmod | grep iwl
 # List all devices that are blocked from being used (e.g., wireless devices)
 rfkill list
 
+# Usually start from here
 # Unblock all Wi-Fi devices that are soft-blocked
 rfkill unblock wifi
 

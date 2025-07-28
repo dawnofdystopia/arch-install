@@ -6,6 +6,12 @@ handle_error() {
     exit 1
 }
 
+# Disable iwd
+echo "Disabling iwd..."
+if ! sudo systemctl disable iwd; then
+    handle_error "Failed to disable iwd."
+fi
+
 # Disable systemd-resolved
 echo "Disabling systemd-resolved..."
 if ! sudo systemctl disable systemd-resolved; then
@@ -31,3 +37,7 @@ if ! sudo systemctl start --now NetworkManager; then
 fi
 
 echo "Network configuration updated."
+
+# add /etc/NetworkManager/conf.d/wifi-powersave.conf and write in it:
+# [connection]
+# wifi.powersave=2
